@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/n3vsk1y/crud-app/routes"
+)
 
 func main() {
-	fmt.Println("123123")
+	r := gin.Default()
+	routes.RegRoutes(r)
+	r.Run(":8080")
 }
